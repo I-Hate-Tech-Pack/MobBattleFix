@@ -45,6 +45,7 @@ public class ClientHandler {
 
     public static void keyEvent() {
         Player player = Minecraft.getInstance().player;
+        if (ClientHandler.itemFunction == null) return;
         if (ClientHandler.itemFunction.consumeClick()) {
             if (player != null && checkItem(player)) {
                 CrossPlatformStuff.INSTANCE.sendToServer(C2SItemFunctionPress.INSTANCE);
