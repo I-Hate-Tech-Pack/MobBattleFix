@@ -30,5 +30,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: compiled-libs
-        path: build/libs/
+        path: |
+          fabric/build/libs/
+          neoforge/build/libs/
         if-no-files-found: error
